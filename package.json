@@ -1,0 +1,16 @@
+{
+  "name": "irclogger",
+  "version": "1.0.0",
+  "description": "Web interface for storing and viewing irc logs. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Trevor Creed",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "irc": "^0.5.0",
+    "mongodb": "^2.2.10",
+    "socket.io": "^1.4.8"
+  }
+}

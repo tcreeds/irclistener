@@ -1,16 +1,3 @@
-var ircBot;
-try{
-    ircServerName = process.argv[2],
-    channelName = "#" + process.argv[3],
-    name = process.argv[4];
-    ircBot = new irc.Client(ircServerName, name, { channels: [channelName]}),
-}
-catch(e)
-{
-    console.log("Not connected to irc.")
-    console.log("usage: node server.js ircServerName channelName nick");
-}
-
 var express = require('express'),
     app = express(),
     server = require("http").createServer(app),
@@ -21,10 +8,10 @@ var express = require('express'),
     ircBot;
     
 try{
-    ircServerName = process.argv[2],
-    channelName = "#" + process.argv[3],
+    ircServerName = process.argv[2];
+    channelName = "#" + process.argv[3];
     name = process.argv[4];
-    ircBot = new irc.Client(ircServerName, name, { channels: [channelName]}),
+    ircBot = new irc.Client(ircServerName, name, { channels: [channelName]});
 }
 catch(e)
 {
